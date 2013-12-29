@@ -1,0 +1,2 @@
+serviceClass: backend.example.project.client.GreetingService
+path: 1017D9765D4966E9C2481501DBF75DD7.gwt.rpc

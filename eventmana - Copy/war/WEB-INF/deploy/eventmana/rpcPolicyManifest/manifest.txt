@@ -1,0 +1,3 @@
+# Module eventmana
+# RPC service class, partial path of RPC policy file
+eventmana.client.GreetingService, 6A8446A16D5D7698AB6B668DFDBDB485.gwt.rpc

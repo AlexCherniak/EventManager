@@ -1,0 +1,3 @@
+# Module eventhost
+# RPC service class, partial path of RPC policy file
+eventHost.client.GreetingService, CE0239346DD53D0E283755AA676D6445.gwt.rpc

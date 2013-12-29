@@ -6,8 +6,8 @@
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '615599291832366', // App ID
-      channelUrl : 'manager-event.appspot.com/channel.html',
+      appId      : '675762885808171', // App ID
+      channelUrl : 'tester--tester.appspot.com/channel.html',
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to access the session
       xfbml      : true  // parse XFBML
@@ -17,7 +17,7 @@
     {
      if (response.status === 'connected') 
     {
-    	window.top.location = "http://1.manager-event.appspot.com/Main";
+    	window.top.location = "http://1.tester--tester.appspot.com/Main";
     	
     	/*document.getElementById("status").innerHTML="";
     	fbgetUserInfo();
@@ -104,29 +104,6 @@ left:35%;
 		<img id="image2" style="position: absolute; top: 238px; left: 89px; cursor:pointer;"
 			src="login-via-facebook.png" onclick="fbLogin()" />
 	</div>
-	<!--<div id="images">
-	<div
-		style="width: 510px; height: 648px; position: relative; text-align: center">
-		<img id="image1" align:"center" style="position: relative;" src="event_manager.png" />
-		<img id="image2" style="position: absolute; top: 321px; left: 73px;"
-			src="facebook_login.png" onclick="fbLogin()" />
-	</div>
-	</div>-->
-	<!--  <div id="my_image">
-		<img src="event_manager.png" /> <img id="OverlayIcon"
-			src="facebook_login.png" />
-	</div>-->
-	<!--<div id="status">
- Click on Below Image to start the demo: <br/>
-<img src="http://hayageek.com/examples/oauth/facebook/oauth-javascript/LoginWithFacebook.png" style="cursor:pointer;" onclick="fbLogin()"/>
-</div>
-
-<br/><br/><br/><br/><br/>
- 
-<div id="message">
-Logs:<br/>
-</div>
-</div>
--->
+	
 </body>
 </html>

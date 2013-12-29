@@ -1,0 +1,2 @@
+serviceClass: eventmana.client.GreetingService
+path: 6A8446A16D5D7698AB6B668DFDBDB485.gwt.rpc
