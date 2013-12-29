@@ -1,3 +1,0 @@
-# Module server_side_example_project
-# RPC service class, partial path of RPC policy file
-backend.example.project.client.GreetingService, 1017D9765D4966E9C2481501DBF75DD7.gwt.rpc

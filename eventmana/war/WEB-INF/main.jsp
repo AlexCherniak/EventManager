@@ -35,8 +35,8 @@
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-   appId      : '675762885808171', // App ID
-      channelUrl : 'tester--tester.appspot.com/channel.html',
+   appId      : '615599291832366', // App ID
+      channelUrl : 'manager-event.appspot.com/channel.html',
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to access the session
       xfbml      : true  // parse XFBML
@@ -46,7 +46,7 @@
     {
      if (response.status === 'connected') 
     {
-    	//window.top.location = "http://tester--tester.appspot.com/HelloWorld.html";
+    	//window.top.location = "http://manager-event.appspot.com/HelloWorld.html";
     	
     	//document.getElementById("status").innerHTML="";
     	fbgetUserName();
@@ -68,7 +68,7 @@
     } else 
     {
         //document.getElementById("message").innerHTML +=  "<br>Logged Out";
- window.top.location = "http://tester--tester.appspot.com/test.html";
+ window.top.location = "http://manager-event.appspot.com/test.html";
         //UNKNOWN ERROR
     }
     }); 
@@ -94,7 +94,7 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=675762885808171";
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=615599291832366";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
@@ -102,7 +102,7 @@
 	
     <div id="templatemo_sidebar">
     	<div id="templatemo_header">
-        	<a href="http://1.tester--tester.appspot.com/" target="_parent"><img src="images/templatemo_logo.png" alt="EventManager" /></a>
+        	<a href="http://1.manager-event.appspot.com/" target="_parent"><img src="images/templatemo_logo.png" alt="EventManager" /></a>
         </div> <!-- end of header -->
         
         <ul class="navigation">
@@ -122,7 +122,7 @@
             <li>welcome: <div id="profilename"></div></li>
             <li></li>
             <li>
-            <div class="fb-like" data-href="http://1.tester--tester.appspot.com" data-width="150" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div class="fb-like" data-href="http://1.manager-event.appspot.com" data-width="150" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
            </li>
             
      </ul>

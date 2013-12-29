@@ -48,7 +48,7 @@ function fbgetPhoto()
 function fbLogout()
 {
 	FB.logout(function(){document.location.reload();});
-	window.location.href = "http://1.tester--tester.appspot.com/";
+	window.location.href = "http://1.manager-event.appspot.com/";
 }
 
 function fbGetLoginStatus() {

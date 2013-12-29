@@ -1,2 +1,0 @@
-serviceClass: eventHost.client.GreetingService
-path: CE0239346DD53D0E283755AA676D6445.gwt.rpc

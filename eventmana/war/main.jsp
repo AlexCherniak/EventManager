@@ -21,8 +21,8 @@
 <script>
  window.fbAsyncInit = function() {
     FB.init({
-      appId      : '675762885808171', // App ID
-      channelUrl : 'tester--tester.appspot.com/channel.html',
+      appId      : '615599291832366', // App ID
+      channelUrl : 'manager-event.appspot.com/channel.html',
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to access the session
       xfbml      : true  // parse XFBML
@@ -32,7 +32,7 @@
     {
      if (response.status === 'connected') 
     {
-    	//window.top.location = "http://tester--tester.appspot.com/HelloWorld.html";
+    	//window.top.location = "http://manager-event.appspot.com/HelloWorld.html";
     	
     	//document.getElementById("status").innerHTML="";
     	fbgetUserName();
@@ -50,7 +50,7 @@
     } else 
     {
         //document.getElementById("message").innerHTML +=  "<br>Logged Out";
- window.top.location = "http://tester--tester.appspot.com/test.html";
+ window.top.location = "http://manager-event.appspot.com/test.html";
         //UNKNOWN ERROR
     }
     }); 
