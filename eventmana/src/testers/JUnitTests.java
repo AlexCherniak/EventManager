@@ -20,7 +20,7 @@ public class JUnitTests {
 		newEvent newTest=new newEvent();
 		
 		//assert
-		assertEquals(newTest.getTries(),0);
+		assertEquals(newTest.getTries(),3);
 	}
 
 }
