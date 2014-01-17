@@ -28,7 +28,7 @@ public class newEvent {
 	public newEvent()//constructor
 	{
 		this.name="";
-		this.tries=0;
+		this.tries=3;//use in JUnit
 		this.hosterID="";
 		this.time=(float) 0.0;
 		this.PrivateOrpublic=false;//private
@@ -48,6 +48,11 @@ public class newEvent {
 		this.location=location;
 		this.PrivateOrpublic=pvtORpp;//public
 		this.calendar=calendars;
+	}
+	
+	public int getTries()//returns the hoster name, I use it for JUnit tests
+	{
+		return this.tries;
 	}
 
 }
