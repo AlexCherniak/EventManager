@@ -61,7 +61,7 @@ public class SaveTheEvent extends HttpServlet {
 				response.sendRedirect("eventNameExists.html");//redirect to the ERROR page
 				
 		}
-		response.sendRedirect("Main");//redirect to the main page
+		response.sendRedirect("Main#services");//redirect to the main page
 	}
 
 }

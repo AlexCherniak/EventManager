@@ -1,7 +1,5 @@
 
 var profileID;
-var profileName;
-
 //var clickedevent=,,, this will check which event clicked to get the data.
 function fbLogin()
 {
@@ -21,7 +19,6 @@ function fbLogin()
 function fbgetUserName() {
 	FB.api('/me', function(response) {
 		var str="<h4>"+response.name+"</h4>";
-		profileName=response.name;
 		document.getElementById("profilename").innerHTML+=str;});
 }
 function fbgetUserId() {
@@ -55,9 +52,12 @@ function fbLogout()
 	window.location.href = "http://1.manager-event.appspot.com/";
 }
 
-function msgFrom(){
-	document.getElementById("profileIDValue").value=" ";
-   }
+function msgSent()
+{
+	alert("thx for your feedback/message!!!");
+}
+
+
   
 
 function fbGetLoginStatus() {

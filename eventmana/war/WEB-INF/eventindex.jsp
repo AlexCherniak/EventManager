@@ -11,11 +11,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+
+
+
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <script src="javascript/functions.js"></script>
 <script src="jquery-1.10.2.min.js"></script>
 <script src="http://digg.googlecode.com/files/Class-0.0.2.js"></script>
 <title>Insert title here</title>
+<!-- Calendar -->
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+	$(function() {
+	  $( "#datepicker" ).datepicker();
+	});
+</script>
+<script>
+function changeImage()
+{
+var x=document.getElementById("EventInvitation").value;
+//x.value=x.value.toUpperCase();
+document.getElementById("EventInvitationImage").src=x;
+}
+</script>
 </head>
 <body background="../images/eventIndex.jpg">
 	
@@ -35,11 +56,12 @@
 
 <%String eventHoster=DataBaseManager.getInstance().getHosterID(eventName); %>
 <%String invitation=DataBaseManager.getInstance().getInvitation(eventName);  %>
-<%float time=DataBaseManager.getInstance().getTime(eventName);  %>
+<%String time=DataBaseManager.getInstance().getCalendar(eventName);  %>
 <%boolean PrivateOrpublic=DataBaseManager.getInstance().getPrivateOrpublic(eventName);  %>
 <%String eventLocation=DataBaseManager.getInstance().getLocation(eventName);  %>
+<%String eventCalendar=DataBaseManager.getInstance().getCalendar(eventName);  %>
 
-<form id="editEvent" action="editEvent" method="post">
+<form id="editEvent" action="editEvent" method="post" target="_parent">
 <table>
 <tr>
 <td>
@@ -53,7 +75,7 @@
 <tr>
 	<td>Event name:</td>
 	<td>
-	<input type="text" id="eventName" name="eventtName" value="<%=eventName%>">
+	<input type="text"  readonly="readonly" id="eventtName" name="eventtName" value="<%=eventName%>">
 	<input type="hidden" id="eventNameOld" name="eventNameOld" value="<%=eventName%>">
 	<input type="hidden" id="eventHoster" name="eventHoster" value="<%=eventHoster%>">
 	</td>
@@ -65,26 +87,45 @@
 </tr>
 
 <tr>
-	<td>Event time:</td>
-	<td><input type="text" id="EventTime" name="EventTime" value="<%=time%>">(enter just numbers)</td>
+	<td>event Date:</td>
+	<td><input type="text" id="datepicker" name="datepicker" value="<%=eventCalendar%>"></td>
 </tr>
 
 <tr>
 	<td>Public?:</td>
-	<td><input type="text" id="EventPublic" name="EventPublic" value="<%=PrivateOrpublic%>"></td>
+	<td>
+	<select name="EventPublic" form="editEvent">
+	<%if(PrivateOrpublic==true){ %>
+	  <option  value="true" selected>public</option>
+	  <option  value="false">private</option>
+	  <%} else{ %>
+	  <option  value="true">public</option>
+	  <option  value="false" selected>private</option>
+	  <%} %>
+	</select>
+	</td>
 </tr>
 
 <tr>
 	<td>Invitation URL:</td>
-	<td><input type="text" id="EventInvitation" name="EventInvitation" value="<%=invitation%>"></td>
+	<td><input type="text" id="EventInvitation" name="EventInvitation" value="<%=invitation%>" onchange="changeImage()"></td>
+	<td><a href="<%=invitation%>" target="_blank"><img id="EventInvitationImage" name="EventInvitationImage" src="<%=invitation%>" alt="<%=eventName%>" height="90" width="110"></a></td>
 </tr>
 
 <tr>
-<td><input type="submit" value="edit"/></td>
+<td><input type="submit" value="save"/></td>
+<td></td> 
+<td>
+<form id="editEvent" action="deleteEvent" method="post" target="_parent">
+<input type="hidden" id="eventNameOld" name="eventNameOld" value="<%=eventName%>">
+<input type="submit" value="delete"/>
+</form>
+</td>
 </tr>
 
 </table>
 </form>
+
 
 
 </body>

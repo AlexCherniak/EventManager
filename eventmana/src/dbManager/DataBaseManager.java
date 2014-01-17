@@ -108,6 +108,17 @@ public final class DataBaseManager
     	
     }
      
+    public void deleteMyEvent(String OldnameO)//update the newEvent object
+    {	
+    	javax.jdo.Query q = pm.newQuery(newEvent.class);
+    	q.setFilter("name==theName");
+    	q.declareParameters("String theName");
+    	List<newEvent> list = (List<newEvent>)q.execute(OldnameO);
+    	for (newEvent item : list)
+		{
+    		pm.deletePersistent(item);
+		}
+    }
     
     public float getTime(String name)//get the time for the "name" event
     {
@@ -176,6 +187,21 @@ public final class DataBaseManager
 		}
     	return temp;
     }
+    
+    public String getCalendar(String name)//get the location for the "name" event
+    {
+    	javax.jdo.Query q = pm.newQuery(newEvent.class);
+    	q.setFilter("name==theName");
+    	q.declareParameters("String theName");
+    	List<newEvent> list = (List<newEvent>)q.execute(name);
+    	String temp = "";
+    	for (newEvent item : list)
+		{
+    		temp=item.calendar;
+		}
+    	return temp;
+    }
+
     
     public void setLocation(String name,String newlocation)//set the new location for the "name" event
     {

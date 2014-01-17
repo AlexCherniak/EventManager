@@ -83,6 +83,16 @@
     <url-pattern>/SaveTheEvent</url-pattern>
   </servlet-mapping>
   
+	  
+	  <servlet>
+		<servlet-name>makeSession</servlet-name>
+		<servlet-class>gaming.makeSession</servlet-class>
+	</servlet>
+	  <servlet-mapping>
+    <servlet-name>makeSession</servlet-name>
+    <url-pattern>/makeSession</url-pattern>
+  </servlet-mapping>
+  
 	  <servlet>
 		<servlet-name>eventindex</servlet-name>
 		<jsp-file>/WEB-INF/eventindex.jsp</jsp-file>
@@ -100,7 +110,27 @@
     <servlet-name>editEvent</servlet-name>
     <url-pattern>/editEvent</url-pattern>
   </servlet-mapping>
-  
+
+	  
+	  <servlet>
+		<servlet-name>deleteEvent</servlet-name>
+		<servlet-class>gaming.deleteEvent</servlet-class>
+	</servlet>
+	  <servlet-mapping>
+    <servlet-name>deleteEvent</servlet-name>
+    <url-pattern>/deleteEvent</url-pattern>
+  </servlet-mapping>
+	  
+	  
+	  	<servlet>
+		<servlet-name>contactusSend</servlet-name>
+		<servlet-class>gaming.contactusSend</servlet-class>
+	</servlet>
+	  <servlet-mapping>
+    <servlet-name>contactusSend</servlet-name>
+    <url-pattern>/contactusSend</url-pattern>
+  </servlet-mapping>
+	  
 	  <servlet>
 		<servlet-name>eventinfo</servlet-name>
 		<servlet-class>gaming.eventinfo</servlet-class>

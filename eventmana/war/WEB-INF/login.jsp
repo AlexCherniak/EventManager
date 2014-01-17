@@ -98,7 +98,7 @@ left:35%;
 <meta charset="windows-1255">
 <title>EventManager</title>
 </head>
-<body background="templatemo_body.jpg">
+<body background="events_body.jpg">
 
 	<div id="demo">
 		<img id="image2" style="position: absolute; top: 238px; left: 89px; cursor:pointer;"

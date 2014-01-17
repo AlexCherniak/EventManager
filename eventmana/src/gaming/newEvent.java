@@ -21,6 +21,8 @@ public class newEvent {
 	public String invitation;//the invitation card link will be saves here
 	@Persistent
 	public String location;//the location of the event
+	@Persistent
+	public String calendar;//the calendar of the event
 	
 	
 	public newEvent()//constructor
@@ -29,22 +31,23 @@ public class newEvent {
 		this.tries=0;
 		this.hosterID="";
 		this.time=(float) 0.0;
-		this.PrivateOrpublic=true;//public
+		this.PrivateOrpublic=false;//private
 		this.invitation="http://pearlsofprofundity.files.wordpress.com/2013/01/thumbs-up-smiley-face.jpg";
 		this.location="location";
+		this.calendar="";
 		
 	}
 	
-	public newEvent(String name,int tries, String hosterID, String invitation, String location) //constructor
+	public newEvent(String name,int tries, String hosterID, String invitation, String location, boolean pvtORpp,String calendars) //constructor
 	{
 		this.name=name;
 		this.tries=tries;
 		this.hosterID=hosterID;
 		this.time=0;
-		this.PrivateOrpublic=true;//public
 		this.invitation=invitation;
 		this.location=location;
-		
+		this.PrivateOrpublic=pvtORpp;//public
+		this.calendar=calendars;
 	}
 
 }

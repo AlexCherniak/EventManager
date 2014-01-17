@@ -1,7 +1,9 @@
 package gaming;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.URLEncoder;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,13 +23,13 @@ import gaming.newEvent;
  * Servlet implementation class editEvent
  */
 @WebServlet("/editEvent")
-public class editEvent extends HttpServlet {
+public class deleteEvent extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public editEvent() {
+    public deleteEvent() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -44,20 +46,12 @@ public class editEvent extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			
-		Object nameO = request.getParameter("eventtName");//new event name
 		Object OldNameO = request.getParameter("eventNameOld");//the old event name
-		Object hosterID = request.getParameter("eventHoster");//event creator
-		Object time = request.getParameter("datepicker");//event time
-		Object PrivateOrpublic = request.getParameter("EventPublic");//event Private Or public
-		Object invitation = request.getParameter("EventInvitation");//event invitation URL
-		Object location = request.getParameter("EventLocation");//event location
-		int tries=0;
 		 
          
-		if (nameO != null && OldNameO!=null && nameO.toString() != "" &&hosterID.toString() != "" &&invitation.toString() != ""  &&location.toString() != "" && OldNameO.toString()!="" )//create a new event object and send it to update function
+		if (OldNameO.toString()!="" )
 		{
-			newEvent newE=new newEvent(nameO.toString(),tries,hosterID.toString(),invitation.toString(),location.toString(),Boolean.valueOf(PrivateOrpublic.toString()),time.toString());
-			DataBaseManager.getInstance().UpdateMyEvent(newE, OldNameO.toString());
+			DataBaseManager.getInstance().deleteMyEvent(OldNameO.toString());
 			response.sendRedirect("http://1.manager-event.appspot.com/Main#services");
 		}//if
 		else
