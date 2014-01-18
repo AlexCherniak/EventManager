@@ -30,7 +30,7 @@ public class JUnitTests {
 		newEvent newTest2=new newEvent("rani",22,"000","1.manager-event.appspot.com","jce",true,"19/01/2014");
 		
 		//assert
-		assertEquals(newTest2.getTries(),3);
+		assertEquals(newTest2.getTries(),22);
 	}
 	
 	
