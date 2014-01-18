@@ -14,7 +14,7 @@ public class JUnitTests {
 	}
 	
 	@Test
-	public void addNewEvent() //input: variables, the event creator
+	public void addNewEvent() //create a new newEvent
 	{
 		//act
 		newEvent newTest=new newEvent();
@@ -22,5 +22,18 @@ public class JUnitTests {
 		//assert
 		assertEquals(newTest.getTries(),3);
 	}
+	
+	@Test
+	public void addNewEventWithVariables() //add a new event With variables
+	{
+		//act
+		newEvent newTest2=new newEvent("rani",22,"000","1.manager-event.appspot.com","jce",true,"19/01/2014");
+		
+		//assert
+		assertEquals(newTest2.getTries(),3);
+	}
+	
+	
+	
 
 }
